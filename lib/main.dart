@@ -55,15 +55,15 @@ class MyApp2 extends StatelessWidget {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          width: 100,
-          height: 100,
-          child: Scaffold(
-            appBar: AppBar(
-              title: Text('App title'),
-            ),
-            body: Text('Second layer'),
-          ),
+        return AlertDialog(
+          title: Text('Contact Us'),
+          content: Text('Mail us at hello@raed.com'),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Close'),
+              onPressed: () => Navigator.of(context).pop(),
+            )
+          ],
         );
       },
     );
